@@ -1,124 +1,264 @@
-# Intelligent Flight Delay Prediction with Aircraft Data
+# ✈️ Intelligent Flight Delay Prediction System
 
-A machine learning project for predicting flight delays using aircraft sensor data and historical flight information.
+### End-to-End Machine Learning Pipeline with Aircraft Sensor Intelligence
 
-## Project Overview
+---
 
-This project implements intelligent flight delay prediction using:
-- **Flight Data**: Historical flight information and delay records
-- **Weather Data**: Weather conditions at airports
-- **Sensor Data**: Aircraft sensor readings (CMAPSS dataset)
+## 🚀 Overview
 
-## Features
+This project builds a **machine learning system** to predict flight delays by combining:
 
-- Data preprocessing and feature engineering
-- Flight delay prediction models (Random Forest, XGBoost)
-- Anomaly detection in sensor data
-- Interactive Streamlit dashboard
-- Comprehensive evaluation metrics
+* ✈️ Flight operations data
+* 🌦️ Weather conditions
+* ⚙️ Aircraft sensor telemetry (CMAPSS dataset)
 
-## Project Structure
+Unlike traditional systems, this approach integrates **operational + environmental + mechanical signals** to improve prediction reliability.
 
-```
+---
+
+## System Interface Preview
+
+The system provides a real-time dashboard for monitoring flight schedules, delay predictions, and aircraft health signals.
+
+<img width="2048" height="1102" alt="image" src="https://github.com/user-attachments/assets/d1e47cf6-3935-450a-90c6-6a5cacee402e" />
+
+---
+
+## 🎯 Problem Statement
+
+Flight delays are driven by multiple factors:
+
+* Weather volatility
+* Air traffic congestion
+* Aircraft health
+
+Most models rely only on historical schedules and weather.
+
+> This system extends prediction capability by incorporating **sensor-based anomaly detection**, enabling deeper insight into aircraft-level risks.
+
+---
+
+## 🧠 System Architecture
+
+The system is divided into two core pipelines:
+
+### 1️⃣ Flight Delay Prediction Engine
+
+* Supervised learning (Random Forest, XGBoost)
+* Predicts delay probability using structured features
+
+### 2️⃣ Aircraft Anomaly Detection Engine
+
+* Unsupervised learning (Isolation Forest / Autoencoder)
+* Detects abnormal sensor behavior
+
+> Sensor anomalies act as **early risk indicators** for potential delays.
+
+---
+
+## Architecture Breakdown
+
+### Flight Delay Prediction Engine
+
+Supervised learning pipeline that processes flight and weather features to estimate delay probability.
+
+<img width="1933" height="1321" alt="image" src="https://github.com/user-attachments/assets/bca33150-fb43-4dc2-ade6-b9f2d8ff7687" />
+
+
+### Aircraft Sensor Anomaly Detection
+
+Unsupervised pipeline that analyzes engine telemetry to detect abnormal behavior patterns.
+
+<img width="1881" height="1075" alt="image" src="https://github.com/user-attachments/assets/81723f62-1aed-4a40-97c9-84a385b89805" />
+
+---
+
+## ⚙️ Key Features
+
+* End-to-end ML pipeline (data → training → evaluation → visualization)
+* Feature engineering across multiple data sources
+* Integration of flight, weather, and sensor data
+* Unsupervised anomaly detection on telemetry
+* Standard evaluation metrics (F1, ROC-AUC, etc.)
+* Interactive Streamlit dashboard
+
+---
+
+## 🗂️ Project Structure
+
+```bash
 ├── data/
-│   ├── raw/                    # Original unmodified datasets
-│   │   ├── flight_data.csv
-│   │   ├── weather_data.csv
-│   │   └── cmapss_sensor_data.csv
-│   └── processed/              # Cleaned & feature-engineered data
-│       ├── flight_processed.csv
-│       └── sensor_processed.csv
+│   ├── raw/                    # Original datasets
+│   └── processed/              # Cleaned & engineered data
 │
-├── notebooks/                  # Jupyter notebooks for EDA & experimentation
-│   ├── 01_eda_flight.ipynb
-│   ├── 02_eda_sensor.ipynb
-│   ├── 03_flight_delay_modeling.ipynb
-│   └── 04_anomaly_detection.ipynb
+├── notebooks/                  # EDA & experimentation
 │
-├── src/                        # Core source code (modular)
-│   ├── __init__.py
-│   ├── preprocess.py           # Data cleaning & feature engineering
-│   ├── train_delay_model.py    # Module 1: training pipeline
-│   ├── anomaly_detection.py    # Module 2: Isolation Forest / Autoencoder
-│   ├── evaluate.py             # Metrics & confusion matrix
-│   └── utils.py                # Helper functions
+├── src/                        # Core ML pipelines
+│   ├── preprocess.py
+│   ├── train_delay_model.py
+│   ├── anomaly_detection.py
+│   ├── evaluate.py
+│   └── utils.py
 │
-├── models/                     # Saved trained models
-│   ├── flight_delay_model.pkl
-│   └── anomaly_model.pkl
-│
-├── app/                        # Dashboard / UI
-│   └── streamlit_app.py
-│
-├── outputs/                    # Plots, reports, results
-│   ├── figures/
-│   └── reports/
-│
+├── models/                     # Saved models
+├── app/                        # Streamlit dashboard
+├── outputs/                    # Reports & visualizations
 ├── requirements.txt
 └── README.md
 ```
 
-## Installation
+---
 
-1. Clone the repository or download the project
-2. Install required packages:
-   ```bash
-   pip install -r requirements.txt
-   ```
+## 📦 Installation
 
-## Usage
+```bash
+git clone <repo_url>
+cd flight-delay-prediction
+pip install -r requirements.txt
+```
 
-### Data Preprocessing
+---
+
+## 📊 Dataset
+
+### Source
+
+* Dataset Folder: `(https://drive.google.com/drive/folders/1trIm62kNPJnZXy9Lpib0qaWD27naDGhy?usp=sharing)`
+
+### Setup
+
+```bash
+data/
+├── raw/
+│   ├── flight_data.csv
+│   ├── weather_data.csv
+│   └── cmapss_sensor_data.csv
+```
+
+* Place all files inside `data/raw/`
+* File names must remain unchanged
+* Processed data will be generated automatically
+
+---
+
+## 🔄 Usage
+
+## Prediction & Diagnostics
+
+The system provides detailed diagnostics for each flight, including delay probability and sensor anomaly scores.
+
+<img width="1863" height="910" alt="image" src="https://github.com/user-attachments/assets/990218e8-0270-4f9a-8e81-33fb8e1b6c77" />
+
+---
+
+
+## Feature Inputs & Telemetry
+
+The model utilizes structured weather data and high-dimensional sensor telemetry as input features.
+
+<img width="1711" height="1200" alt="image" src="https://github.com/user-attachments/assets/e521a377-f3fd-4bf3-ad6c-772f13303e20" />
+
+<img width="1593" height="1102" alt="image" src="https://github.com/user-attachments/assets/706508f6-c260-49a7-92cc-576a7990e148" />
+
+<img width="1593" height="1102" alt="image" src="https://github.com/user-attachments/assets/30234818-a3b2-4647-a1ff-3372be1c7717" />
+
+---
+
+### 1. Data Preprocessing
 
 ```python
 from src.preprocess import preprocess_pipeline
 
-preprocess_pipeline('data/raw/flight_data.csv', 'data/processed/flight_processed.csv')
+preprocess_pipeline(
+    input_path='data/raw/flight_data.csv',
+    output_path='data/processed/flight_processed.csv'
+)
 ```
 
-### Training Flight Delay Model
+---
+
+### 2. Model Training
 
 ```python
 from src.train_delay_model import train_pipeline
 import pandas as pd
 
-# Load processed data
 df = pd.read_csv('data/processed/flight_processed.csv')
 
-# Split into train/validation
-X_train, y_train = df.drop('delay', axis=1), df['delay']
+X = df.drop('delay', axis=1)
+y = df['delay']
 
-# Train model
-model = train_pipeline(X_train, y_train)
+model = train_pipeline(X, y)
 ```
 
-### Anomaly Detection
+---
+
+### 3. Anomaly Detection
 
 ```python
 from src.anomaly_detection import detect_anomalies
 import pandas as pd
 
-# Load sensor data
-data = pd.read_csv('data/raw/cmapss_sensor_data.csv')
+sensor_data = pd.read_csv('data/raw/cmapss_sensor_data.csv')
 
-# Detect anomalies
-predictions, detector = detect_anomalies(data.values, contamination=0.05)
+predictions, detector = detect_anomalies(
+    sensor_data.values,
+    contamination=0.05
+)
 ```
 
-### Running the Dashboard
+---
+
+### 4. Run Dashboard
 
 ```bash
 streamlit run app/streamlit_app.py
 ```
 
-## Requirements
+---
 
-See `requirements.txt` for full list of dependencies.
+## 📈 Evaluation
 
-## Contributing
+### Classification Metrics
 
-Feel free to submit issues and enhancement requests!
+* Accuracy
+* Precision / Recall
+* F1 Score
+* ROC-AUC
 
-## License
+### Anomaly Detection
 
-This project is open source and available under the MIT License.
+* Outlier score distribution
+* Sensitivity tuning via contamination
+
+---
+
+## 🧩 Design Decisions
+
+* **Tree-based models** → strong performance on structured data
+* **Isolation Forest** → efficient for high-dimensional anomaly detection
+* **Modular architecture** → scalable and maintainable
+
+---
+
+## ⚠️ Limitations
+
+* CMAPSS dataset is simulated
+* Batch-based pipeline (no real-time streaming)
+* Limited model interpretability
+
+---
+
+## 🚀 Future Improvements
+
+* Real-time prediction pipeline
+* Time-series models (LSTM for sensor data)
+* Model explainability (SHAP / LIME)
+* API deployment (FastAPI)
+* Integration with airline systems
+
+---
+
+## 📜 License
+
+MIT License
