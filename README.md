@@ -23,6 +23,20 @@
   <img src="https://img.shields.io/badge/FOCUS-Production--Grade%20ML%20System-black?style=for-the-badge&logo=airplane&logoColor=white"/>
 </p>
 ---
+## 📑 Table of Contents
+
+- [Overview](#-overview)
+- [Problem Statement](#-problem-statement)
+- [System Architecture](#-system-architecture)
+- [Key Features](#-key-features)
+- [Project Structure](#-project-structure)
+- [Dataset](#-dataset)
+- [Usage](#-usage)
+- [Evaluation](#-evaluation)
+- [Design Decisions](#-design-decisions)
+- [Limitations](#-limitations)
+- [Future Improvements](#-future-improvements)
+- [License](#-license)
 
 <p align="center">
   <i>Bridging operational, environmental, and mechanical intelligence for accurate delay prediction</i>
