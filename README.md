@@ -1,26 +1,31 @@
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:203a43,100:2c5364&height=220&section=header&text=Flight%20Delay%20Prediction%20System&fontSize=36&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=ML%20%2B%20Sensor%20Intelligence&descAlignY=55&descSize=18" />
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0f2027,50:1c1c1c,100:2c5364&height=240&section=header&text=Flight%20Delay%20Prediction%20System&fontSize=38&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=End-to-End%20ML%20Pipeline%20%7C%20Sensor%20Intelligence&descAlignY=58&descSize=18" />
 </p>
 
-# ✈️ Intelligent Flight Delay Prediction 
-### End-to-End Machine Learning Pipeline with Aircraft Sensor Intelligence
+<h1 align="center">Intelligent Flight Delay Prediction System</h1>
+<p align="center">
+  Multi-Modal Machine Learning System combining Flight, Weather, and Sensor Data
+</p>
 
 <p align="center">
 
-<img src="https://img.shields.io/badge/Python-3.9+-blue?logo=python&logoColor=white"/>
-<img src="https://img.shields.io/badge/Machine%20Learning-XGBoost%20%7C%20RandomForest-green"/>
-<img src="https://img.shields.io/badge/Anomaly%20Detection-IsolationForest-orange"/>
-<img src="https://img.shields.io/badge/Dashboard-Streamlit-red?logo=streamlit&logoColor=white"/>
-<img src="https://img.shields.io/badge/Data-Multi--Modal-purple"/>
-<img src="https://img.shields.io/badge/Status-Production%20Ready-success"/>
-<img src="https://img.shields.io/badge/License-MIT-yellow"/>
+<img src="https://img.shields.io/badge/Python-3.9+-0A66C2?logo=python&logoColor=white"/>
+<img src="https://img.shields.io/badge/ML-XGBoost%20%7C%20RandomForest-1E8449"/>
+<img src="https://img.shields.io/badge/Anomaly-IsolationForest-F39C12"/>
+<img src="https://img.shields.io/badge/Dashboard-Streamlit-E74C3C?logo=streamlit&logoColor=white"/>
+<img src="https://img.shields.io/badge/Data-Multi--Modal-8E44AD"/>
+<img src="https://img.shields.io/badge/Pipeline-End--to--End-2C3E50"/>
+<img src="https://img.shields.io/badge/Status-Active-27AE60"/>
+<img src="https://img.shields.io/badge/License-MIT-F1C40F"/>
 
 </p>
-
+<p align="center">
+  <img src="https://img.shields.io/badge/FOCUS-Production--Grade%20ML%20System-black?style=for-the-badge&logo=airplane&logoColor=white"/>
+</p>
 ---
 
 <p align="center">
-  <img src="https://img.shields.io/badge/System%20Type-End--to--End%20ML%20Pipeline-black?style=for-the-badge"/>
+  <i>Bridging operational, environmental, and mechanical intelligence for accurate delay prediction</i>
 </p>
 
 ---
